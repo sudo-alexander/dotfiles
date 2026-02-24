@@ -1,0 +1,12 @@
+.tab-close-button {
+    display: none !important;
+}
+
+#tabs-newtab-button, 
+#new-tab-button {
+    display: none !important;
+}
+
+#alltabs-button {
+    display: none !important;
+}

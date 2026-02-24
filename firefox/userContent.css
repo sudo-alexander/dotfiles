@@ -1,0 +1,84 @@
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
+    .click-target-container *, .top-sites-list * {
+        color: #fff !important;
+        text-shadow: 2px 2px 2px #222 !important;
+    }
+
+    .top-site-outer .title,
+    .top-site-outer .pin-icon, 
+    .top-site-outer .icon-pin-small {
+        display: none !important;
+    }
+
+    .top-site-outer {
+        margin-bottom: 45px !important;
+    }
+
+    :root {
+        --newtab-element-hover-color: transparent !important;
+        --newtab-focus-outline: transparent !important;
+    }
+
+    .top-site-outer:hover,
+    .top-site-outer:focus-within,
+    .top-site-outer .top-site-button,
+    .top-site-outer .top-site-button:hover,
+    .top-site-outer .top-site-button:focus,
+    .top-site-outer .top-site-button:active,
+    .top-site-outer .tile {
+        background-color: transparent !important;
+        background-image: none !important;
+        border: none !important;
+        box-shadow: none !important;
+        outline: none !important;
+    }
+
+    .top-site-outer:hover .tile .icon-wrapper {
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border-radius: 12px !important;
+        box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.2) !important;
+    }
+
+    .top-site-outer .context-menu-button {
+        display: flex !important;
+        opacity: 0;
+        transition: opacity 0.2s !important;
+        z-index: 100 !important;
+    }
+
+    .top-site-outer:hover .context-menu-button {
+        opacity: 1;
+        fill: #fff !important;
+    }
+
+    .actions button.primary {
+        background-color: #00dfd8 !important;
+        color: #fff !important;
+    }
+}
+
+@-moz-document url("about:home"), url("about:newtab") {
+    .top-site-outer .tile {
+        transition: transform 0.2s ease-in-out !important;
+    }
+    
+    .top-site-outer:hover .tile {
+        transform: scale(1.3) !important;
+    }
+  
+    .top-site-outer .tile .icon-wrapper {
+        width: 80px !important;
+        height: 65px !important;
+        padding: 0 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        pointer-events: auto !important;
+        background-color: transparent !important;
+    }
+
+    .top-site-outer .tile .top-site-icon {
+        background-color: transparent !important;
+    }
+}
+

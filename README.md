@@ -37,6 +37,18 @@ A clean, distraction-free interface modification achieved strictly through `user
 * **Enhanced New Tab Icons:** Website titles are removed for a cleaner look. Icons are enlarged and centered to focus on visual recognition.
 * **Smooth Animations:** Added a scale-up transition effect when hovering over top sites, making the dashboard feel responsive and modern.
 
+## 3. ⌨️ Vim config
+### ✨ Key Features
+
+A clean and functional `.vimrc` designed for comfortable text editing without bloating it with too many plugins.
+
+* **Smart Indentation:** Configured with 4-space tabs and auto-indentation.
+* **Navigation:** Relative line numbers are enabled to help you jump between lines faster.
+* **Persistent Undo:** Your undo history is saved even after you close the file (stored in `~/.vim/undo`).
+* **Russian Layout Support:** Commands like `:w` or `dd` work even if you forget to switch from the Russian keyboard layout.
+* **Fast Exit:** Added a shortcut: typing `jj` in Insert mode returns you to Normal mode instantly.
+* **System Clipboard:** Integrated with the system clipboard for easy copy-pasting.
+
 ## 📂 Structure
 
 ```text
@@ -46,6 +58,6 @@ A clean, distraction-free interface modification achieved strictly through `user
 ├── firefox/
 │   ├── userChrome.css
 │   └── userContent.css
-└── .screenshots/
+└── screenshots/
     ├── firefox-homepage.png
     └── zsh-preview.png

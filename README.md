@@ -1,5 +1,13 @@
 # My Dotfiles
 
+## ⚙️ Installation
+```bash
+git clone https://github.com/sudo-alexander/dotfiles.git
+cd dotfiles
+chmod +x install.sh
+./install.sh
+```
+
 ## 🦊 Firefox UI customization
 ![Firefox customization](screenshots/firefox-preview.png)
 

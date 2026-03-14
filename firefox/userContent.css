@@ -1,4 +1,12 @@
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing) {
+    body {
+        background-image: url("img/dark-gradient-background.jpg") !important;
+        background-attachment: fixed !important;
+        background-size: cover !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
+
     .click-target-container *, .top-sites-list * {
         color: #fff !important;
         text-shadow: 2px 2px 2px #222 !important;

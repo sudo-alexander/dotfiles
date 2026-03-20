@@ -1,0 +1,70 @@
+# ==============================================================================
+#                          ALACRITTY CONFIGURATION
+# ==============================================================================
+
+[env]
+TERM = "alacritty"
+
+[window]
+# Window spacing and transparency
+padding = { x = 14, y = 14 }
+opacity = 0.98
+decorations = "full"
+
+[font]
+# Typography settings (Hack font family)
+normal = { family = "Hack", style = "Regular" }
+bold = { family = "Hack", style = "Bold" }
+size = 11.0
+
+# ------------------------------------------------------------------------------
+# COLORS: Custom Graphite Palette
+# ------------------------------------------------------------------------------
+
+[colors.primary]
+background = "#1e1e1e" # Graphite background
+foreground = "#f5f5f5"
+
+[colors.normal]
+black =   "#1e1e1e"
+red =     "#f28b82"
+green =   "#81c995"
+yellow =  "#fdd663"
+blue =    "#8ab4f8"
+magenta = "#c58af9"
+cyan =    "#82d1ff"
+white =   "#e3e3e3"
+
+[colors.bright]
+black =   "#4d4d4d"
+red =     "#ff8a80"
+green =   "#b9f6ca"
+yellow =  "#ffe57f"
+blue =    "#b3d1ff"
+magenta = "#d1a3ff"
+cyan =    "#a4f4ff"
+white =   "#ffffff"
+
+[colors.selection]
+text = "#ffffff"
+background = "#44475a"
+
+# ------------------------------------------------------------------------------
+# INPUT & INTERACTION
+# ------------------------------------------------------------------------------
+
+[keyboard]
+# Clipboard shortcuts
+bindings = [
+  { key = "C", mods = "Control|Shift", action = "Copy" },
+  { key = "V", mods = "Control|Shift", action = "Paste" }
+]
+
+[mouse]
+# Mouse behavior and bindings
+hide_when_typing = true
+bindings = [
+  { mouse = "Right", action = "Paste" }
+]
+
+# ==============================================================================

@@ -4,15 +4,14 @@
 ```bash
 git clone https://github.com/sudo-alexander/dotfiles.git
 cd dotfiles
-chmod +x install.sh
 ./install.sh
 ```
 
 ## 🦊 Firefox UI customization
-![Firefox customization](screenshots/firefox-preview.png)
+![Firefox customization](./.screenshots/firefox-preview.png)
 
 ## 🖥️ Zsh config
-![Zsh config](screenshots/zsh-preview.png)
+![Zsh config](./.screenshots/zsh-preview.png)
 
 ## 📦 What's inside?
 
@@ -58,6 +57,6 @@ A clean and functional `.vimrc` designed for comfortable text editing without bl
 ├── firefox/
 │   ├── userChrome.css
 │   └── userContent.css
-└── screenshots/
-    ├── firefox-homepage.png
+└──.screenshots/
+    ├── firefox-preview.png
     └── zsh-preview.png

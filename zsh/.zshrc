@@ -5,6 +5,8 @@
 autoload -Uz compinit
 compinit
 
+unset zle_bracketed_paste
+
 # Shell Behavior
 setopt AUTO_CD
 setopt COMPLETE_IN_WORD
@@ -21,7 +23,6 @@ SAVEHIST=10000
 alias ls='ls --color=auto'
 alias ll='ls -la'
 alias grep='grep --color=auto'
-alias gs='git status'
 
 # ==============================================================================
 #                                    PROMPT
@@ -40,6 +41,10 @@ PROMPT='%B%F{green}%n@%m%f %F{yellow}%~%f$(git_branch)
 if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
     ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+fi
+
+if [[ -z "$TMUX" && $- == *i* ]]; then
+    tmux attach-session -t default || tmux new-session -s default
 fi
 
 # ==============================================================================
@@ -61,5 +66,6 @@ if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
     ZSH_HIGHLIGHT_STYLES[path]='fg=yellow,bold'
     
     # Unknown commands - White (to avoid distracting red colors)
-    ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=white'
+    ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=red,bold'
 fi
+

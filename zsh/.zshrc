@@ -35,8 +35,7 @@ git_branch() {
 
 # Prompt Symbol: Red '#' for root, White '$' for regular user
 PROMPT='%B%F{green}%n@%m%f %F{yellow}%~%f$(git_branch)
-%(#.%F{196}#.%F{white}$)%f%b '
-
+%(#.%F{196}#.%F{green}$) '
 # Zsh Autosuggestions
 if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

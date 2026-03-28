@@ -5,7 +5,8 @@
 autoload -Uz compinit
 compinit
 
-unset zle_bracketed_paste
+autoload -Uz bracketed-paste-magic
+zle -N bracketed-paste bracketed-paste-magic
 
 # Shell Behavior
 setopt AUTO_CD
@@ -34,8 +35,11 @@ git_branch() {
 }
 
 # Prompt Symbol: Red '#' for root, White '$' for regular user
-PROMPT='%B%F{green}%n@%m%f %F{yellow}%~%f$(git_branch)
-%(#.%F{196}#.%F{green}$) '
+USER_COLOR="%(#.%F{196}.%F{green})"
+
+PROMPT='%B${USER_COLOR}%n@%m%f %F{yellow}%~%f$(git_branch)
+${USER_COLOR}%(#.#.$)%f '
+
 # Zsh Autosuggestions
 if [ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -59,7 +63,7 @@ if [ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.z
     ZSH_HIGHLIGHT_STYLES[alias]='fg=cyan,bold'
     
     # Sudo / Precommands - Orange
-    ZSH_HIGHLIGHT_STYLES[precommand]='fg=#FF6F00,bold'
+    ZSH_HIGHLIGHT_STYLES[precommand]='fg=#FF9104,bold'
     
     # Paths - Yellow
     ZSH_HIGHLIGHT_STYLES[path]='fg=yellow,bold'

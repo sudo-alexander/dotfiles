@@ -1,62 +1,71 @@
-# My Dotfiles
+# 🛠️ My Dotfiles
 
 ## ⚙️ Installation
 ```bash
-git clone https://github.com/sudo-alexander/dotfiles.git
+git clone https://github.com/ai-xandr/dotfiles.git
 cd dotfiles
+chmod +x install.sh
 ./install.sh
 ```
 
-## 🦊 Firefox UI customization
-![Firefox customization](./.screenshots/firefox-preview.png)
+This repository utilizes **GNU Stow** for symbolic link management and automated deployment.
 
-## 🖥️ Zsh config
-![Zsh config](./.screenshots/zsh-preview.png)
+## Preview
+### 🦊 Firefox UI customization
+![Firefox](./.screenshots/firefox-preview.png)
 
-## 📦 What's inside?
+### 💻 Zsh + Alacritty + Tmux
+![Zsh + Alacritty](./.screenshots/zsh-alacritty-preview.png)
 
-## 1. 🖥️ Zsh config
-### ✨ Key Features
+## Technical Details
 
-This setup is designed for those who love the **classic GNOME/Bash aesthetics** but want the **modern power of Zsh**.
+### 🐚 Shell (Zsh)
+* **Process Management:** Automatic initialization and attachment to a named `tmux` session upon interactive shell startup.
+* **Prompt Architecture:** Custom lightweight prompt including dynamic Git branch detection and status indicators.
+* **Visual Enhancements:** Integration of `zsh-autosuggestions` and `zsh-syntax-highlighting` with a custom color schema optimized for path and command visibility.
+* **Behavioral Flags:** Configured with `AUTO_CD`, `EXTENDED_GLOB`, and shared history across multiple active sessions.
 
-* **Classic Look, Zsh Power:** Styled to resemble the standard GNOME Console (Bash-rice), keeping it familiar and clean.
-* **Enhanced Highlighting:** Unlike basic Bash, this config highlights not just the username and folders, but also specific commands, aliases, and paths.
-* **Two-Line Prompt:** A smart two-line layout ensures your commands always start from the same position, regardless of how deep you are in the file system.
-* **Root Awareness:** The prompt symbol turns **Bold Red (#)** when running as root, providing a clear visual warning.
-* **Smart Completion:** Includes `zsh-autosuggestions` and `compinit` for a faster, "IDE-like" terminal experience.
-* **Focused Syntax:** Intentionally disables the distracting "red-on-type" error highlighting, keeping the interface calm and focused.
+### 🪟 Terminal Multiplexer (Tmux)
+* **Clipboard Integration:** Configured with a Wayland-specific bridge via `wl-copy` for seamless buffer synchronization between the terminal and system environment.
+* **Display:** Full TrueColor (`RGB`) and Alacritty terminal feature support enabled.
+* **Ergonomics:** 1-based indexing for windows and panes; mouse-driven pane selection and scrolling active.
 
-## 2. 🦊 Firefox Minimalist UI
-### ✨ Key Features
+### 💻 Terminal Emulator (Alacritty)
+* **Typography:** Integration of the Hack font family with specific padding adjustments for high-DPI displays.
+* **Color Palette:** Implementation of a custom low-contrast "Graphite" theme.
 
-A clean, distraction-free interface modification achieved strictly through `userChrome.css` and `userContent.css`.
+### 📝 Text Editor (Vim)
+* **Architecture:** Vanilla configuration designed for efficiency without reliance on external plugin managers.
+* **Storage Isolation:** Persistent `undo` and `swap` files are hardware-isolated in dedicated `~/.vim/` subdirectories to prevent filesystem clutter.
+* **UX:** Native support for normal mode commands while utilizing Cyrillic keyboard layouts via `langmap`.
 
-* **Pure Minimalism:** Hidden tab close buttons, "New Tab" plus icon, and the "List all tabs" arrow to eliminate UI clutter.
-* **Enhanced New Tab Icons:** Website titles are removed for a cleaner look. Icons are enlarged and centered to focus on visual recognition.
-* **Smooth Animations:** Added a scale-up transition effect when hovering over top sites, making the dashboard feel responsive and modern.
-
-## 3. ⌨️ Vim config
-### ✨ Key Features
-
-A clean and functional `.vimrc` designed for comfortable text editing without bloating it with too many plugins.
-
-* **Smart Indentation:** Configured with 4-space tabs and auto-indentation.
-* **Navigation:** Relative line numbers are enabled to help you jump between lines faster.
-* **Persistent Undo:** Your undo history is saved even after you close the file (stored in `~/.vim/undo`).
-* **Russian Layout Support:** Commands like `:w` or `dd` work even if you forget to switch from the Russian keyboard layout.
-* **Fast Exit:** Added a shortcut: typing `jj` in Insert mode returns you to Normal mode instantly.
-* **System Clipboard:** Integrated with the system clipboard for easy copy-pasting.
+### 🦊 Browser (Firefox)
+* **Interface Modification:** Custom UI hardening via `userChrome.css` and `userContent.css`.
+* **Visuals:** Implementation of a streamlined "New Tab" page with custom CSS transitions and background rendering.
+* **Minimalism:** Removal of native tab-close buttons and secondary navigation elements to maximize vertical screen real estate.
 
 ## 📂 Structure
 
 ```text
 .
-├── zsh/
-│   └── .zshrc
-├── firefox/
+├── alacritty
+│   └── .config
+│       └── alacritty
+│           └── alacritty.toml
+├── firefox
+│   ├── img
+│   │   └── dark-gradient-background.jpg
 │   ├── userChrome.css
 │   └── userContent.css
-└──.screenshots/
-    ├── firefox-preview.png
-    └── zsh-preview.png
+├── install.sh
+├── README.md
+├── .screenshots
+│   ├── firefox-preview.png
+│   ├── vim-preview.png
+│   └── zsh-alacritty-preview.png
+├── tmux
+│   └── .tmux.conf
+├── vim
+│   └── .vimrc
+└── zsh
+    └── .zshrc

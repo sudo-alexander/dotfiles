@@ -46,5 +46,14 @@ inoremap jj <Esc>
 
 " Russian layout support
 set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
-highlight Statement ctermfg=Yellow
-highlight LineNr ctermfg=Grey
+
+" Colors
+highlight LineNr       ctermfg=245
+highlight CursorLineNr ctermfg=11
+highlight VertSplit    ctermfg=245 ctermbg=NONE
+highlight Statement    ctermfg=3
+highlight Type         ctermfg=6
+highlight Comment      ctermfg=245
+highlight Constant     ctermfg=5
+highlight String       ctermfg=2
+highlight PreProc      ctermfg=4

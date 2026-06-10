@@ -8,7 +8,7 @@ TERM = "alacritty"
 [window]
 # Window spacing and transparency
 padding = { x = 14, y = 14 }
-opacity = 0.98
+opacity = 1
 decorations = "full"
 
 [font]
@@ -18,7 +18,7 @@ bold = { family = "Hack", style = "Bold" }
 size = 11.0
 
 # ------------------------------------------------------------------------------
-# COLORS: Custom Graphite Palette
+# COLORS
 # ------------------------------------------------------------------------------
 
 [colors.primary]
@@ -66,5 +66,3 @@ hide_when_typing = true
 bindings = [
   { mouse = "Right", action = "Paste" }
 ]
-
-# ==============================================================================

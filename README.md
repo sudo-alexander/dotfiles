@@ -8,8 +8,6 @@ chmod +x install.sh
 ./install.sh
 ```
 
-This repository utilizes **GNU Stow** for symbolic link management and automated deployment.
-
 ## Preview
 ### 🦊 Firefox UI customization
 ![Firefox](./.screenshots/firefox-preview.png)
